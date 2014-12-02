@@ -7,6 +7,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 #import "UIImageView+MHGallery.h"
+#import "MHToolbar.h"
 #import "MHTransitionDismissMHGallery.h"
 #import "MHTransitionPresentMHGallery.h"
 #import "MHPresenterImageView.h"

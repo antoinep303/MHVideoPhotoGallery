@@ -94,6 +94,16 @@
     
     if (!self.UICustomization.showOverView) {
         self.navigationItem.hidesBackButton = YES;
+        
+        
+        UIBarButtonItem *doneBarButton =  [UIBarButtonItem.alloc initWithImage:[UIImage imageNamed:@"x"]
+                                                           landscapeImagePhone:[UIImage imageNamed:@"x-landscape"]
+                                                                         style:UIBarButtonItemStyleDone
+                                                                        target:self
+                                                                        action:@selector(donePressed)];
+        
+        self.navigationItem.leftBarButtonItem = doneBarButton;
+        
     }else{
         if (self.galleryViewController.UICustomization.backButtonState == MHBackButtonStateWithoutBackArrow) {
             UIBarButtonItem *backBarButton = [UIBarButtonItem.alloc initWithImage:MHTemplateImage(@"ic_square")
@@ -103,13 +113,15 @@
             self.navigationItem.hidesBackButton = YES;
             self.navigationItem.leftBarButtonItem = backBarButton;
         }
+        
+        
+        UIBarButtonItem *doneBarButton =  [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                      target:self
+                                                                                      action:@selector(donePressed)];
+        
+        self.navigationItem.rightBarButtonItem = doneBarButton;
     }
     
-    UIBarButtonItem *doneBarButton =  [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                                  target:self
-                                                                                  action:@selector(donePressed)];
-    
-    self.navigationItem.rightBarButtonItem = doneBarButton;
     
     self.view.backgroundColor = [self.UICustomization MHGalleryBackgroundColorForViewMode:MHGalleryViewModeImageViewerNavigationBarShown];
     

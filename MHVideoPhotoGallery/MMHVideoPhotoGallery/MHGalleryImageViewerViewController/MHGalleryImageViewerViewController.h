@@ -22,9 +22,9 @@
 @interface MHGalleryImageViewerViewController : UIViewController<UIPageViewControllerDelegate,UIPageViewControllerDataSource,UINavigationControllerDelegate,UIScrollViewDelegate,UIGestureRecognizerDelegate,UINavigationBarDelegate>
 
 @property (nonatomic, strong)          NSArray *galleryItems;
-@property (nonatomic, strong)          UIToolbar *toolbar;
+@property (nonatomic, strong)          MHToolbar *toolbar;
 @property (nonatomic, strong)          UITextView *descriptionView;
-@property (nonatomic, strong)          UIToolbar *descriptionViewBackground;
+@property (nonatomic, strong)          MHToolbar *descriptionViewBackground;
 @property (nonatomic)                  NSInteger pageIndex;
 @property (nonatomic, strong)          UIPageViewController *pageViewController;
 @property (nonatomic, strong)          UIImageView *presentingFromImageView;
